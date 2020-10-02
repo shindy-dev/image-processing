@@ -1,3 +1,8 @@
+"""
+author: shindy-dev
+created: 2020/10/03
+github: https://github.com/shindy-dev
+"""
 __all__ = ("ls_all", "ls", "ls_dir", "ls_file", "ls_tree")
 
 import os
@@ -6,7 +11,7 @@ from typing import List, Dict
 
 def ls_all(path: str) -> List[str]:
     """
-    Get all files and folders from path.
+    Get all file and folder list from path.
     """
     return [f for f in os.listdir(path)]
 
@@ -14,7 +19,7 @@ def ls_all(path: str) -> List[str]:
 # get files and folders in path
 def ls(path: str, get_hidden: bool = False) -> List[str]:
     """
-    Get files and folders from path.\n
+    Get files and folder list from path.\n
     get_hidden: If you want to get hidden files and folders, select True.
     """
     return (
@@ -26,7 +31,7 @@ def ls(path: str, get_hidden: bool = False) -> List[str]:
 
 def ls_dir(path: str, get_hidden: bool = False) -> List[str]:
     """
-    Get folders from path.\n
+    Get folder list from path.\n
     get_hidden: If you want to get hidden folders, select True.
     """
     return [f for f in ls(path, get_hidden) if os.path.isdir(os.path.join(path, f))]
@@ -34,7 +39,7 @@ def ls_dir(path: str, get_hidden: bool = False) -> List[str]:
 
 def ls_file(path: str, get_hidden: bool = False) -> List[str]:
     """
-    Get files from path.\n
+    Get file list from path.\n
     get_hidden: If you want to get hidden files, select True.
     """
     return [f for f in ls(path, get_hidden) if os.path.isfile(os.path.join(path, f))]
