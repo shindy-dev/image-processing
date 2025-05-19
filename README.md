@@ -1,4 +1,5 @@
 # image-processing
+Caffeを使用した深層学習のサンプルコード（顔認識）
  
 ## Setup
 
